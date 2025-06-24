@@ -37,12 +37,19 @@ int - is number of words and their counts to save. 500 = save 500 words and thei
  WordCount.exe wordlist dict int
 
 WordCount.exe top10knames.txt rockyou.txt 500  <--- output files will have 500 words. 
-=============================================Second Easiest Way, Compile with NVCC====================
-Honestly the easiest way probably to compile this is as a single .cu file and use nvcc to compile for both linux and windows. 
-ill leave the trie_counter_final_fixed.cu file in the nvcc folder in the precompiled folder. 
+
+
+Second Easiest Way, Compile with NVCC
+
+use the CUDA toolkits nvcc tool to compile the .cu in src\nvcc using 
+" nvcc -allow-unsupported-compiler -O2 -std=c++17 -o WordCounter.exe trie_counter_final_fixed.cu" 
+while in the nvcc directory for both linux and windows. 
+
+ill leave the trie_counter_final_fixed.cu file in the nvcc folder in the src folder but i probably wont maintain it as ill use cmake in the end. 
 its not as optimized i dont think but it is decently fast and will for for a few days until i make the gui and cross platform support.
-ok maybe a week or two. but still. might be easier than messing with premake if you havent messed with them before. otherwise...
-=======================================================================================================
+ok maybe a week or two. but still. might be easier than messing with premake if you havent messed with it before. otherwise...
+
+Hardest wayish
 
 for Linux the source code is here in the src folder. its just those two files the .cu and the .cpp.
 only thing you should have to adjust is the premake for the directories for your files. 
