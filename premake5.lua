@@ -23,7 +23,7 @@ project "WordCounter"
     libdirs {
         "C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/lib/x64"
     }
-
+	
     links { "cudart_static" }
     defines { "CUDA_STATIC" }
 

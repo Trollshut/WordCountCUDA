@@ -72,6 +72,10 @@ nvcc -allow-unsupported-compiler -O2 -std=c++17 -o WordCounter.exe trie_counter_
 
 ## 🛠 Advanced: Compile from Source
 
+
+> 💡 **Note:** Whether you compile using Visual Studio or `g++`, the **CUDA kernel (`.cu`) is always compiled with `nvcc`**. Make sure `nvcc` is properly installed and accessible in your system `PATH`.
+
+
 - Source files are located in the `src/` folder:
   - `wordcounter.cpp`
   - `kernel.cu` (or `trie_counter_final_fixed.cu` for NVCC route)
